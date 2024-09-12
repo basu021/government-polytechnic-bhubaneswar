@@ -7,6 +7,8 @@
 html {
   margin: 0;
   padding: 0;
+  max-width: 100%;
+    overflow-x: hidden;
 }
 
 section {
@@ -28,20 +30,9 @@ section {
 
 /* ---------------- Dark Mode Switch */
 
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
-  margin: 9px;
-  margin-right: 10px;
-}
 
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
+
+
 
 .slider {
   position: absolute;
@@ -110,7 +101,7 @@ input:checked + .slider:before {
   max-width: 60%;
 }
 .top-nav-iteams a {
-  color: var(--w);
+  /* color: var(--w); */
   text-decoration: none;
   padding: 2px 5px;
   margin-left: 10px;
@@ -341,7 +332,7 @@ input:checked + .slider:before {
 .nav-menu > li:hover > a,
 .nav-menu > li.active > a,
 .nav-menu > li.focus > a {
-  color: #fafafa;
+  color: var(--primary-color);
 }
 
 .nav-menu > li > a > i,
@@ -352,7 +343,7 @@ input:checked + .slider:before {
   transform: scale(1.4);
 }
 .nav-menu > li:hover {
-  background-color: #ae154a;
+  background-color: #dddddd;
 }
 
 .nav-menu > li > a > [class*="ion-"] {
@@ -1135,3 +1126,88 @@ input:checked + .slider:before {
 /* End of Notice section */
 
 /* End Header Elements */
+
+
+/* Topper students */
+
+.underline {
+  display: flex;
+  align-items: center; /* Centers items vertically */
+  justify-content: center; /* Centers items horizontally */
+  gap: 10px; /* Adds space between the elements */
+}
+
+.underline span {
+  display: inline-block;
+  width: 80px;
+  height: 2px;
+  background-color: #000000;
+}
+
+.underline i {
+  display: inline-block;
+  font-size: 20px; /* Adjust size as needed */
+  vertical-align: middle;
+}
+
+@media (max-width: 767px) {
+  .carousel-inner {
+    max-height: 400px;
+    overflow: hidden;
+  }
+}
+/* notice board */
+
+.student-notice {
+  max-height: 500px; 
+  height: 500px !important;
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.marquee li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.notice ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.notice li {
+  border-bottom: 1px solid #ddd;
+  padding: 0 5px; 
+  transition: padding 250ms, transform 250ms;
+}
+.notice li:hover {
+  padding: 0 10px;
+  transform: scale(1); 
+}
+
+.notice li:hover .notice-title {
+  color: var(--primary-color);
+}
+.notice li:last-child {
+  border-bottom: none;
+}
+
+.notice-title {
+  font-size: 1rem;
+  color: #333;
+  margin: 0;
+}
+
+.notice-date {
+  font-size: 0.875rem;
+  color: #777;
+  margin: 5px 0 0;
+  text-align: end;
+}
